@@ -15,5 +15,15 @@ namespace TeaBagMaker
         {
             InitializeComponent();
         }
+
+        private void CBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
