@@ -31,7 +31,7 @@ namespace TeaBagMaker
         {
             if (cBox.SelectedIndex == 0 || cBox.SelectedIndex == 3)
             {
-                teaTime = 5;
+                teaTime = 60*2;
             }
             else if (cBox.SelectedIndex == 1)
             {
