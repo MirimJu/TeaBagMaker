@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cBox = new System.Windows.Forms.ComboBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn1 = new System.Windows.Forms.Button();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.countTxt = new System.Windows.Forms.TextBox();
+            this.countBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
@@ -56,28 +56,29 @@
             this.cBox.TabIndex = 1;
             this.cBox.SelectedIndexChanged += new System.EventHandler(this.CBox_SelectedIndexChanged);
             // 
-            // timer1
+            // Timer
             // 
-            this.timer1.Interval = 1000;
+            this.Timer.Interval = 1000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // textBox1
+            // countTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(14, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(201, 39);
-            this.textBox1.TabIndex = 2;
+            this.countTxt.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.countTxt.Location = new System.Drawing.Point(14, 48);
+            this.countTxt.Name = "countTxt";
+            this.countTxt.ReadOnly = true;
+            this.countTxt.Size = new System.Drawing.Size(201, 29);
+            this.countTxt.TabIndex = 2;
             // 
-            // btn1
+            // countBtn
             // 
-            this.btn1.Location = new System.Drawing.Point(16, 83);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(199, 72);
-            this.btn1.TabIndex = 3;
-            this.btn1.Text = "담그기!";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.Btn1_Click);
+            this.countBtn.Location = new System.Drawing.Point(16, 83);
+            this.countBtn.Name = "countBtn";
+            this.countBtn.Size = new System.Drawing.Size(199, 72);
+            this.countBtn.TabIndex = 3;
+            this.countBtn.Text = "담그기!";
+            this.countBtn.UseVisualStyleBackColor = true;
+            this.countBtn.Click += new System.EventHandler(this.CountBtn_Click);
             // 
             // contextMenuStrip1
             // 
@@ -89,14 +90,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(227, 189);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.countBtn);
+            this.Controls.Add(this.countTxt);
             this.Controls.Add(this.cBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,9 +108,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBox;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.TextBox countTxt;
+        private System.Windows.Forms.Button countBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
